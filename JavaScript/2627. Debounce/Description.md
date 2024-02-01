@@ -1,0 +1,3 @@
+Problem: given a function, return a debounced version of that function. A debounced function is one that is canceled if it is called within time t, passed into the function initialization call. This could be useful for something like a search bar autofill function which calls an api, but you don’t want to call the api every time the user types a letter.
+
+Solution: The debounce function will return a function that wraps the function fn and passes all arguments to fn. If the debounced version of the function is called before the time t has passed, then clearTimeout will run and prevent the running of that function call. If debounced function is called and there isn’t another call before time t, then it will run the function fn.
